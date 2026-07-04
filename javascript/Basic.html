@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    const user = { name: "Aasha", age: 21, city: "Delhi"};
+
+    // Old way
+    const name1 = user.name;
+
+    // Destructuring 
+    const { name, age} = user;
+    console.log(name, age); // Asha 21
+
+    // Destructuring in function parameters (exactly how React props work)
+    function Card({ title, subtitle }) {
+        return `${title} - ${subtitle}`;
+    }
+    console.log(Card({ title: "Hello", subtitle: "World" }));
+</script>
+<body>
+    
+</body>
+</html>
